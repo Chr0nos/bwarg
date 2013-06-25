@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icones" lang="en">
+        <file>ico/apply.ico</file>
+        <file>ico/refresh.ico</file>
+    </qresource>
+</RCC>

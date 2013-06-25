@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>752</width>
+    <height>535</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BwarG file renamer</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="verticalLayoutWidget_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>731</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="mainLayout" stretch="0,6,0">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="12,0">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,0">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetFixedSize</enum>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>Dossier</string>
+             </property>
+             <widget class="QWidget" name="horizontalLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>631</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="dirPath"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="browse">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_2">
+                 <property name="text">
+                  <string>Refresh</string>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="flat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="8,5">
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>Remplacer</string>
+             </property>
+             <widget class="QWidget" name="verticalLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>381</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="lineEdit">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>Par</string>
+             </property>
+             <widget class="QWidget" name="verticalLayoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>231</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_2">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;numeric: %i&lt;/p&gt;&lt;p&gt;numeric with zero: %n&lt;/p&gt;&lt;p&gt;file lower name: %f&lt;/p&gt;&lt;p&gt;file original name: %F&lt;/p&gt;&lt;p&gt;extenssion: %e&lt;/p&gt;&lt;p&gt;date (short): %d&lt;/p&gt;&lt;p&gt;date (long): %D&lt;/p&gt;&lt;p&gt;Use folder name: %p&lt;/p&gt;&lt;p&gt;regex capture: %x (episode number)&lt;/p&gt;&lt;p&gt;crc32: %crc&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QGroupBox" name="groupBox_6">
+           <property name="title">
+            <string>Actions</string>
+           </property>
+           <widget class="QWidget" name="verticalLayoutWidget_3">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>178</width>
+              <height>93</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="checkBox">
+               <property name="text">
+                <string>Regex</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="numLen">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimal number lenght&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="value">
+                <number>2</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QPushButton" name="pushButton_3">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ajouter à la job list&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>+Job</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Appliquer les changements&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Go</string>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>Fichiers</string>
+         </property>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>19</y>
+            <width>711</width>
+            <height>301</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QListWidget" name="fileList">
+             <property name="showDropIndicator" stdset="0">
+              <bool>false</bool>
+             </property>
+             <property name="defaultDropAction">
+              <enum>Qt::IgnoreAction</enum>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="movement">
+              <enum>QListView::Static</enum>
+             </property>
+             <property name="resizeMode">
+              <enum>QListView::Adjust</enum>
+             </property>
+             <property name="layoutMode">
+              <enum>QListView::SinglePass</enum>
+             </property>
+             <property name="viewMode">
+              <enum>QListView::ListMode</enum>
+             </property>
+             <property name="sortingEnabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>752</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionReLister"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuEditer">
+    <property name="title">
+     <string>Editer</string>
+    </property>
+    <widget class="QMenu" name="menuRegex">
+     <property name="title">
+      <string>Regex</string>
+     </property>
+     <widget class="QMenu" name="menuCompter">
+      <property name="title">
+       <string>Compter</string>
+      </property>
+      <addaction name="actionCompter"/>
+      <addaction name="actionType"/>
+      <addaction name="actionRecompter"/>
+     </widget>
+     <widget class="QMenu" name="menuMusique">
+      <property name="title">
+       <string>Musique</string>
+      </property>
+      <addaction name="action_piste_artiste_titre"/>
+     </widget>
+     <widget class="QMenu" name="menuAuxiliaire">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valeur de %x&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="title">
+       <string>Auxiliaire</string>
+      </property>
+      <addaction name="actionDefinir"/>
+      <addaction name="actionNombres"/>
+     </widget>
+     <widget class="QMenu" name="menuEspaces">
+      <property name="title">
+       <string>Espaces</string>
+      </property>
+      <addaction name="actionEspaces_en_debut_de_titre"/>
+      <addaction name="actionEn_fin_de_nom"/>
+     </widget>
+     <addaction name="actionCRC32"/>
+     <addaction name="actionCrochets"/>
+     <addaction name="actionDouble_majuscules"/>
+     <addaction name="actionDecaper"/>
+     <addaction name="actionTout"/>
+     <addaction name="actionExtenssion_en_minuscules"/>
+     <addaction name="menuEspaces"/>
+     <addaction name="menuCompter"/>
+     <addaction name="menuMusique"/>
+     <addaction name="menuAuxiliaire"/>
+    </widget>
+    <addaction name="menuRegex"/>
+    <addaction name="actionPreferences"/>
+    <addaction name="actionJobList"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <widget class="QMenu" name="menuCompteur">
+     <property name="title">
+      <string>Compteur</string>
+     </property>
+     <addaction name="actionDebut_du_compteur"/>
+     <addaction name="actionPas_du_compteur"/>
+     <addaction name="actionDefault"/>
+    </widget>
+    <widget class="QMenu" name="menuRandom">
+     <property name="title">
+      <string>Random</string>
+     </property>
+     <addaction name="actionModele"/>
+     <addaction name="actionLongueur"/>
+    </widget>
+    <addaction name="actionToujours_au_dessus"/>
+    <addaction name="actionTrier"/>
+    <addaction name="menuCompteur"/>
+    <addaction name="menuRandom"/>
+    <addaction name="actionActiver_ID3"/>
+    <addaction name="actionActiver_miniatures"/>
+    <addaction name="actionMode_icones"/>
+    <addaction name="actionIgnorer_Extenssions"/>
+    <addaction name="actionActiver_Exif"/>
+   </widget>
+   <widget class="QMenu" name="menuAide">
+    <property name="title">
+     <string>Aide</string>
+    </property>
+    <addaction name="actionVersion"/>
+   </widget>
+   <widget class="QMenu" name="menuOutils">
+    <property name="title">
+     <string>Outils</string>
+    </property>
+    <addaction name="actionThumb_db_viewer"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuEditer"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuOutils"/>
+   <addaction name="menuAide"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionCRC32">
+   <property name="text">
+    <string>CRC32</string>
+   </property>
+  </action>
+  <action name="actionCrochets">
+   <property name="text">
+    <string>Crochets</string>
+   </property>
+  </action>
+  <action name="actionDouble_majuscules">
+   <property name="text">
+    <string>Double majuscules</string>
+   </property>
+  </action>
+  <action name="actionCompter">
+   <property name="text">
+    <string>Classic</string>
+   </property>
+  </action>
+  <action name="actionDecaper">
+   <property name="text">
+    <string>Miracle</string>
+   </property>
+  </action>
+  <action name="actionTout">
+   <property name="text">
+    <string>Tout</string>
+   </property>
+  </action>
+  <action name="actionExtenssion_en_minuscules">
+   <property name="text">
+    <string>Extenssion en minuscules</string>
+   </property>
+  </action>
+  <action name="actionToujours_au_dessus">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Toujours au dessus</string>
+   </property>
+  </action>
+  <action name="actionTrier">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Trier</string>
+   </property>
+  </action>
+  <action name="actionPas_du_compteur">
+   <property name="text">
+    <string>Pas</string>
+   </property>
+  </action>
+  <action name="actionDebut_du_compteur">
+   <property name="text">
+    <string>Debut</string>
+   </property>
+  </action>
+  <action name="actionEspaces_en_debut_de_titre">
+   <property name="text">
+    <string>En debut de nom</string>
+   </property>
+  </action>
+  <action name="actionActiver_ID3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Activer ID3</string>
+   </property>
+  </action>
+  <action name="actionType">
+   <property name="text">
+    <string>Type</string>
+   </property>
+  </action>
+  <action name="actionDefault">
+   <property name="text">
+    <string>Default</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionActiver_miniatures">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Activer miniatures</string>
+   </property>
+  </action>
+  <action name="action_piste_artiste_titre">
+   <property name="text">
+    <string>[piste] [artiste] - [titre]</string>
+   </property>
+  </action>
+  <action name="actionMode_icones">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mode icones</string>
+   </property>
+  </action>
+  <action name="actionReLister">
+   <property name="text">
+    <string>ReLister</string>
+   </property>
+   <property name="toolTip">
+    <string>Re liste le contenu du dossier actuel</string>
+   </property>
+  </action>
+  <action name="actionModele">
+   <property name="text">
+    <string>Modele</string>
+   </property>
+  </action>
+  <action name="actionLongueur">
+   <property name="text">
+    <string>Longueur</string>
+   </property>
+  </action>
+  <action name="actionDefinir">
+   <property name="text">
+    <string>Definir</string>
+   </property>
+  </action>
+  <action name="actionJobList">
+   <property name="text">
+    <string>JobList</string>
+   </property>
+  </action>
+  <action name="actionIgnorer_Extenssions">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ignorer Extenssions</string>
+   </property>
+  </action>
+  <action name="actionNombres">
+   <property name="text">
+    <string>Nombres</string>
+   </property>
+  </action>
+  <action name="actionRecompter">
+   <property name="text">
+    <string>Recompter</string>
+   </property>
+  </action>
+  <action name="actionVersion">
+   <property name="text">
+    <string>Version</string>
+   </property>
+  </action>
+  <action name="actionEn_fin_de_nom">
+   <property name="text">
+    <string>En fin de nom</string>
+   </property>
+  </action>
+  <action name="actionThumb_db_viewer">
+   <property name="text">
+    <string>Thumb.db viewer</string>
+   </property>
+  </action>
+  <action name="actionActiver_Exif">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Activer Exif</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

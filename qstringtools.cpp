@@ -1,0 +1,1 @@
+/home/adamaru/projets/freeCoffe/freeCoffe/qstringtools.cpp
