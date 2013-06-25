@@ -345,9 +345,11 @@ moc_qcrc32.o: moc_qcrc32.cpp
 
 ####### Install
 
-install:   FORCE
+install: all
+	cp bwarg /usr/bin/
 
-uninstall:   FORCE
+uninstall:
+	rm /usr/bin/bwarg
 
 FORCE:
 
