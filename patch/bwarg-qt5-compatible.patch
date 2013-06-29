@@ -1,0 +1,25 @@
+Common subdirectories: ./bwarg/.git and ./bwarg-qt5/.git
+diff -up ./joblist.cpp ./joblist.cpp
+--- ./joblist.cpp	2013-06-29 02:33:47.401214518 +0200
++++ ./joblist.cpp	2013-06-29 02:31:36.536565595 +0200
+@@ -142,7 +142,7 @@ void JobList::on_pushButton_8_clicked()
+     //selection du fichier à charger:
+     QFileDialog sel(this);
+     sel.setModal(true);
+-    sel.setFilter("*.job");
++    sel.setNameFilter("*.job");
+     sel.show();
+     sel.exec();
+     if (sel.result() == sel.Reject) return;
+diff -up ./qiconizer.cpp ./qiconizer.cpp
+--- ./qiconizer.cpp	2013-06-29 02:33:47.405214538 +0200
++++ ./qiconizer.cpp	2013-06-29 02:20:16.789194910 +0200
+@@ -31,7 +31,7 @@ QIcon QIconizer::loadIconFromThumbnailCa
+     QProcessEnvironment env(QProcessEnvironment::systemEnvironment());
+     QCryptographicHash hash(QCryptographicHash::Md5);
+ 
+-    hash.addData("file://" + QString(QUrl(filePath).encodedPath().data()).toLocal8Bit());
++    hash.addData("file://" + QString(QUrl(filePath).toEncoded().data()).toLocal8Bit());
+ 
+     QString iconPath = env.value("HOME") +"/.cache/thumbnails/normal/" + hash.result().toHex() + ".png";
+ 
