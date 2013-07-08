@@ -80,6 +80,8 @@ private slots:
 
     void on_actionActiver_Exif_triggered();
 
+    void on_actionAide_triggered();
+
 private:
     Ui::MainWindow *ui;
     int counterPas;

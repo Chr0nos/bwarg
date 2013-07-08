@@ -434,6 +434,7 @@
      <string>Aide</string>
     </property>
     <addaction name="actionVersion"/>
+    <addaction name="actionAide"/>
    </widget>
    <widget class="QMenu" name="menuOutils">
     <property name="title">
@@ -634,6 +635,11 @@
    </property>
    <property name="text">
     <string>Activer Exif</string>
+   </property>
+  </action>
+  <action name="actionAide">
+   <property name="text">
+    <string>Triggers</string>
    </property>
   </action>
  </widget>

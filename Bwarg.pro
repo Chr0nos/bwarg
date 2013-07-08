@@ -21,7 +21,8 @@ SOURCES += main.cpp\
 	joblist.cpp \
 	qiconizer.cpp \
 	thumbsdbviewer.cpp \
-    qcrc32.cpp
+    qcrc32.cpp \
+    helpui.cpp
 
 HEADERS  += mainwindow.h \
 	config.h \
@@ -32,11 +33,13 @@ HEADERS  += mainwindow.h \
 	main.h \
 	qiconizer.h \
 	thumbsdbviewer.h \
-    qcrc32.h
+    qcrc32.h \
+    helpui.h
 
 FORMS    += mainwindow.ui \
 	config.ui \
 	joblist.ui \
-	thumbsdbviewer.ui
+	thumbsdbviewer.ui \
+    helpui.ui
 
 LIBS += -ltag

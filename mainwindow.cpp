@@ -9,6 +9,7 @@
 #include "qiconizer.h"
 #include "qcrc32.h"
 #include "thumbsdbviewer.h"
+#include "helpui.h"
 
 #include <QDir>
 #include <QFile>
@@ -727,4 +728,11 @@ void MainWindow::on_actionActiver_Exif_triggered()
 {
     enableExif = ui->actionActiver_Exif->isChecked();
     if (!enableExif) clearExif();
+}
+
+void MainWindow::on_actionAide_triggered()
+{
+    HelpUi help;
+    help.show();
+    help.exec();
 }
