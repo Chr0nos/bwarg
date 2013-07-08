@@ -25,7 +25,6 @@
 #include <QSize>
 #include <QIODevice>
 
-
 //#include <QDebug>
 
 #define VERSION "1.8.2"
@@ -73,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionIgnorer_Extenssions->setChecked(ignoreExt);
     ui->actionActiver_Exif->setChecked(enableExif);
 
-    ui->statusBar->showMessage("Ready.");
+    ui->statusBar->showMessage(tr("Pret."));
 
     //la fonction rafraichis la liste d'elle même: pas la peine de faire un refresh.
     ui->dirPath->setText(QDir::currentPath());
@@ -125,7 +124,7 @@ void MainWindow::renameFiles() {
     QString filePath,newFilePath;
     int renamed = 0;
     const int m = ui->fileList->count();
-    if (!m) ui->statusBar->showMessage("Nothink to rename.",2000);
+    if (!m) ui->statusBar->showMessage(tr("Rien à renomer."),2000);
     for (int i = 0;i < m;i++) {
         filePath = ui->dirPath->text() + "/" + ui->fileList->item(i)->toolTip();
         newFilePath = ui->dirPath->text() + "/" + ui->fileList->item(i)->text();
@@ -148,10 +147,13 @@ void MainWindow::renameFiles() {
 }
 
 void MainWindow::refreshNewFileList() {
-    if ((!ui->lineEdit->text().length()) && (jobList.isEmpty())) resetNewNames();
+    if ((jobList.isEmpty()) && (ui->lineEdit->text().isEmpty())) {
+            resetNewNames();
+            return;
+    }
 
     ui->pushButton_2->setEnabled(false);
-    ui->statusBar->showMessage("Calculating new files names");
+    ui->statusBar->showMessage(tr("Génération des nouveaux noms de fichiers..."));
     QString fileName,newFileName,ext,rootFileName;
     QStringList tokens;
     const QString path = ui->dirPath->text().split('/').last();
@@ -306,7 +308,7 @@ void MainWindow::refreshNewFileList() {
         }
         ui->progressBar->setValue(i +1);
     }
-    ui->statusBar->showMessage("Done.");
+    ui->statusBar->showMessage(tr("Fini."));
     ui->pushButton_2->setEnabled(true);
 }
 
@@ -711,7 +713,7 @@ void MainWindow::on_actionThumb_db_viewer_triggered()
 }
 
 void MainWindow::resetNewNames() {
-    //remet les noms d'origine dans la fileList sans pour autant re chercher les fichiers sur le disque
+    //remet les noms d'origine dans la fileList sans pour autant chercher à nouveau les fichiers sur le disque
     const int m = ui->fileList->count();
     for (int i = 0;i < m;i++) {
         ui->fileList->item(i)->setText(ui->fileList->item(i)->toolTip());
@@ -732,7 +734,7 @@ void MainWindow::on_actionActiver_Exif_triggered()
 
 void MainWindow::on_actionAide_triggered()
 {
-    HelpUi help;
+    HelpUi help(ui->lineEdit_2);
     help.show();
     help.exec();
 }

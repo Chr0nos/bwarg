@@ -43,3 +43,7 @@ FORMS    += mainwindow.ui \
     helpui.ui
 
 LIBS += -ltag
+
+RESOURCES +=
+
+TRANSLATIONS=lang_fr.ts lang_us.ts

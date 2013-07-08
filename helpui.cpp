@@ -3,11 +3,13 @@
 #include <QMap>
 #include <QTableWidgetItem>
 
-HelpUi::HelpUi(QWidget *parent) :
+HelpUi::HelpUi(QLineEdit *edit,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::HelpUi)
 {
     ui->setupUi(this);
+    this->setLayout(ui->verticalLayout);
+    this->edit = edit;
 
     QMap<QString,QString> map;
     map["%p"] = "The current dir name";
@@ -37,6 +39,7 @@ HelpUi::HelpUi(QWidget *parent) :
         QTableWidgetItem *usage = new QTableWidgetItem;
 
         trigger->setText(key);
+        trigger->setToolTip(map[key]);
         usage->setText(map[key]);
 
         ui->tableWidget->insertRow(0);
@@ -48,4 +51,10 @@ HelpUi::HelpUi(QWidget *parent) :
 HelpUi::~HelpUi()
 {
     delete ui;
+}
+
+void HelpUi::on_tableWidget_doubleClicked(const QModelIndex &index)
+{
+    if (edit->text().isEmpty()) edit->setText(index.data().toString());
+    else edit->setText(edit->text() + " " + index.data().toString());
 }
