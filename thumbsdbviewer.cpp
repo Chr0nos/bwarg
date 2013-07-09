@@ -46,7 +46,7 @@ void ThumbsDbViewer::on_pushButton_clicked()
 void ThumbsDbViewer::on_pushButton_2_clicked()
 {
     if (ui->listWidget->selectedItems().isEmpty()) return;
-    QString filePath = QFileDialog::getSaveFileName(this,"Selectionez le fichier de destination",QString(),"*.jpg");
+    QString filePath = QFileDialog::getSaveFileName(this,tr("Selectionez le fichier de destination"),QString(),"*.jpg");
     if (filePath.isEmpty()) return;
     QFile file(filePath);
     if (!file.open(QIODevice::ReadWrite)) return;

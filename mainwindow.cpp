@@ -55,16 +55,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     initConfig();
 
-    //ui->verticalLayoutWidget_8->setLayout(ui->verticalLayout_10);
-    ui->groupBox->setLayout(ui->horizontalLayout_6);
-    ui->groupBox_2->setLayout(ui->verticalLayout_7);
-    ui->groupBox_3->setLayout(ui->verticalLayout_6);
-    ui->groupBox_6->setLayout(ui->verticalLayout_8);
-    ui->groupBox_4->setLayout(ui->horizontalLayout_5);
-    ui->centralWidget->setLayout(ui->mainLayout);
-
-
-
     ui->actionPreferences->setVisible(false); //je le cache le temp que je finise la section
 
     ui->actionActiver_ID3->setChecked(enableId3);

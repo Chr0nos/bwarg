@@ -431,22 +431,22 @@
         <translation>Triggers</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="76"/>
+        <location filename="mainwindow.cpp" line="75"/>
         <source>Pret.</source>
         <translation>Pret.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="128"/>
+        <location filename="mainwindow.cpp" line="127"/>
         <source>Rien Ã  renomer.</source>
         <translation>Rien Ã  renomer.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="157"/>
+        <location filename="mainwindow.cpp" line="156"/>
         <source>GÃ©nÃ©ration des nouveaux noms de fichiers...</source>
         <translation>GÃ©nÃ©ration des nouveaux noms de fichiers...</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="312"/>
+        <location filename="mainwindow.cpp" line="311"/>
         <source>Fini.</source>
         <translation>Fini.</translation>
     </message>
@@ -467,6 +467,11 @@
         <location filename="thumbsdbviewer.ui" line="83"/>
         <source>Extraire</source>
         <translation>Extraire</translation>
+    </message>
+    <message>
+        <location filename="thumbsdbviewer.cpp" line="49"/>
+        <source>Selectionez le fichier de destination</source>
+        <translation>Selectionez le fichier de destination</translation>
     </message>
 </context>
 </TS>

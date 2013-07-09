@@ -6,52 +6,42 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>437</width>
-    <height>378</height>
+    <width>565</width>
+    <height>410</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Trigger help</string>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>10</y>
-     <width>431</width>
-     <height>361</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <column>
+      <property name="text">
+       <string>Trigger</string>
       </property>
-      <column>
-       <property name="text">
-        <string>Trigger</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Utilitée</string>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item>
-     <widget class="QDialogButtonBox" name="buttonBox">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+     </column>
+     <column>
+      <property name="text">
+       <string>Utilitée</string>
       </property>
-      <property name="standardButtons">
-       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>
@@ -62,8 +52,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>29</x>
+     <y>337</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -78,8 +68,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>97</x>
+     <y>337</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>

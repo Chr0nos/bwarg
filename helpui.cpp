@@ -8,7 +8,6 @@ HelpUi::HelpUi(QLineEdit *edit,QWidget *parent) :
     ui(new Ui::HelpUi)
 {
     ui->setupUi(this);
-    this->setLayout(ui->verticalLayout);
     this->edit = edit;
 
     QMap<QString,QString> map;
