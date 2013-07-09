@@ -367,9 +367,14 @@ moc_helpui.o: moc_helpui.cpp
 
 ####### Install
 
-install:   FORCE
+install: all
+	mkdir -p /usr/share/bwarg/
+	cp lang_*.qm /usr/share/bwarg/
+	cp bwarg /usr/bin
 
-uninstall:   FORCE
+uninstall:
+	rm -r /usr/share/bwarg
+	rm /usr/bin/bwarg
 
 FORCE:
 
