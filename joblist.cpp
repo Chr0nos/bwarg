@@ -118,7 +118,7 @@ void JobList::on_pushButton_clicked()
 void JobList::on_pushButton_7_clicked()
 {
     //fonction de sauvegarde de la jobList
-    QString filePath = QFileDialog::getSaveFileName(this,"Selectionez le fichier de destination",QString(),"*.job");
+    QString filePath = QFileDialog::getSaveFileName(this,tr("Selectionez le fichier de destination"),QString(),"*.job");
     if (filePath.isNull()) return;
 
     QFile file(filePath);

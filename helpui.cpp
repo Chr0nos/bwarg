@@ -11,26 +11,26 @@ HelpUi::HelpUi(QLineEdit *edit,QWidget *parent) :
     this->edit = edit;
 
     QMap<QString,QString> map;
-    map["%p"] = "The current dir name";
-    map["%x"] = "Sub regex value (by defaut the episode number)";
-    map["%i"] = "Incremental count (general)";
-    map["%n"] = "Incremental count (by type)";
-    map["%d"] = "file Date";
-    map["%h"] = "file creation hour";
-    map["%F"] = "file name (original)";
-    map["%f"] = "file name in lower chars";
-    map["%e"] = "file extenssion (ex: jpg)";
-    map["%r"] = "random value";
-    map["%album"] = "song album name";
-    map["%artist"] = "song artist name";
-    map["%co"] = "song comment";
-    map["%genre"] = "song genre";
-    map["%b"] = "song bitrate";
-    map["%track"] = "song track number";
-    map["%model"] = "image device model used for capture";
+    map["%p"] = tr("The current dir name");
+    map["%x"] = tr("Sub regex value (by defaut the episode number)");
+    map["%i"] = tr("Incremental count (general)");
+    map["%n"] = tr("Incremental count (by type)");
+    map["%d"] = tr("file Date");
+    map["%h"] = tr("file creation hour");
+    map["%F"] = tr("file name (original)");
+    map["%f"] = tr("file name in lower chars");
+    map["%e"] = tr("file extenssion (ex: jpg)");
+    map["%r"] = tr("random value");
+    map["%album"] = tr("song album name");
+    map["%artist"] = tr("song artist name");
+    map["%co"] = tr("song comment");
+    map["%genre"] = tr("song genre");
+    map["%b"] = tr("song bitrate");
+    map["%track"] = tr("song track number");
+    map["%model"] = tr("image device model used for capture");
 
 
-    map["%crc"] = "File crc32 (on data)";
+    map["%crc"] = tr("File crc32 (on data)");
 
 
     foreach (QString key,map.keys()) {
