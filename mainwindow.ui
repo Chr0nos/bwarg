@@ -17,7 +17,7 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,0">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,5,0">
     <property name="margin">
      <number>5</number>
     </property>
