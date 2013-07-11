@@ -47,3 +47,12 @@ LIBS += -ltag
 RESOURCES +=
 
 TRANSLATIONS=lang_fr.ts lang_us.ts
+
+
+
+bwarg.files = bwarg
+bwarg.path = /usr/bin/
+trad.files = lang_*.qm
+trad.path = /usr/share/bwarg/
+
+INSTALLS += bwarg trad
