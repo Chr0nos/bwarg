@@ -54,5 +54,7 @@ bwarg.files = bwarg
 bwarg.path = /usr/bin/
 trad.files = lang_*.qm
 trad.path = /usr/share/bwarg/
+desktop.files = bwarg.desktop
+desktop.path = /usr/share/applications/
 
-INSTALLS += bwarg trad
+INSTALLS += bwarg trad desktop
