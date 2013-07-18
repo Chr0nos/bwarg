@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Bwarg files renamer
+Name[fr]=Renomeur Bwarg
+Comment=massive files renamer
+Comment[fr]=renomeur de fichiers en masse
+Exec=bwarg
+Icon=bwarg
+Terminal=false
+Type=Application
+Categories=System
+
