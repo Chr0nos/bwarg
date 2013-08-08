@@ -51,10 +51,10 @@ TRANSLATIONS=lang_fr.ts lang_us.ts
 
 
 bwarg.files = bwarg
-bwarg.path = /usr/bin/
+bwarg.path = ${D}/usr/bin/
 trad.files = lang_*.qm
-trad.path = /usr/share/bwarg/
+trad.path = ${D}/usr/share/bwarg/
 desktop.files = bwarg.desktop
-desktop.path = /usr/share/applications/
+desktop.path = ${D}/usr/share/applications/
 
 INSTALLS += bwarg trad desktop

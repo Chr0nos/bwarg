@@ -329,7 +329,7 @@ void MainWindow::on_dirPath_textChanged() {
 
 void MainWindow::refreshFileList() {
     //fonction de listing des dossiers
-    ui->statusBar->showMessage("Listing in progress...");
+    ui->statusBar->showMessage(tr("Listing in progress..."));
     ui->pushButton_2->setEnabled(false);
     ui->fileList->clear();
     QStringList files;
@@ -450,7 +450,7 @@ void MainWindow::on_actionTrier_triggered() {
 void MainWindow::on_fileList_doubleClicked(const QModelIndex &index) {
     QString fileName = ui->fileList->item(index.row())->text();
     QInputDialog input;
-    input.setLabelText("Enter the new file name.");
+    input.setLabelText(tr("Enter the new file name."));
     input.setTextValue(fileName);
     input.show();
     input.exec();
@@ -493,7 +493,7 @@ void MainWindow::refreshFileIcon(const int i) {
 int MainWindow::askInt(const int currentValue) {
     QInputDialog input;
     input.setModal(true);
-    input.setLabelText("Enter the numeric value");
+    input.setLabelText(tr("Enter the numeric value"));
     input.setTextValue(QString().number(currentValue));
     input.show();
     input.exec();
@@ -628,7 +628,7 @@ QString MainWindow::askString(QString text,QString value) {
 
 void MainWindow::on_actionDefinir_triggered()
 {
-    QString newRegex = askString("Entrez la nouvelle regex",regexForX.pattern());
+    QString newRegex = askString(tr("Entrez la nouvelle regex"),regexForX.pattern());
     if (!newRegex.isNull()) regexForX.setPattern(newRegex);
     refreshNewFileList();
 }

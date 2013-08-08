@@ -9,6 +9,7 @@ HelpUi::HelpUi(QLineEdit *edit,QWidget *parent) :
 {
     ui->setupUi(this);
     this->edit = edit;
+    ui->tableWidget->setColumnWidth(1,380);
 
     QMap<QString,QString> map;
     map["%p"] = tr("The current dir name");
@@ -54,6 +55,7 @@ HelpUi::~HelpUi()
 
 void HelpUi::on_tableWidget_doubleClicked(const QModelIndex &index)
 {
+    //todo: bug fix ici: on doit dans tous les cas prendre la colone 0  et pas que la colone actuelle
     if (edit->text().isEmpty()) edit->setText(index.data().toString());
     else edit->setText(edit->text() + " " + index.data().toString());
 }
